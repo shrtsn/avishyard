@@ -44,7 +44,7 @@ function cookieBomb()
 
     console.log("Acknowledgment from target domain:", event.data);
 });
-
+}
 
 
 cookieBomb();
