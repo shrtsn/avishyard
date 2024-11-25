@@ -1,0 +1,2441 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width"/>
+        <link rel="icon" type="image/png" href="images/favicon.png">
+        <style>
+            body {
+                background-color: #fafafa;
+                height: 100%;
+                height: 100vh;
+                margin: 1em auto;
+                overflow: hidden;
+                position: relative;
+                padding: 0 1em;
+                text-align: center;
+            }
+
+            body * {
+                font-size: 1em;
+                line-height: 1.4;
+                color: #333;
+                font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",Helvetica,Arial,sans-serif;
+            }
+        </style>
+        
+    
+    </head>
+    <body>
+        <div id="tfs_container_root"></div>
+        <div id="tfs_container_root_pre"></div>
+        <noscript>
+            <div style="display: block; margin: 75px auto; text-align: center; max-width: 600px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                <span>To use chat, please enable JavaScript.</span>
+            </div>
+        </noscript>
+        <script id="tfs-js-iframe-async">
+            "use strict";
+            /** * 24/7 Customer, Inc. Confidential, Do Not Distribute. This is an * unpublished, proprietary work which is fully protected under * copyright law. This code may only be used pursuant to a valid * license from 24/7 Customer, Inc. */
+            /** * PreRender module * @module loader/pre-render */
+            (function() {
+                var _doc = document;
+                var _htmlLoadingTemplate = "<style type='text/css'>body {background-color: transparent;overflow: hidden;}body * {box-sizing: border-box;}#tfs_loading_container {font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;position: absolute;top: 50%;left: 50%;width: 160px;background: #fafafa;border: 1px solid #cccccc;border-radius: 10px;padding: 10px;transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);-moz-transform: translate(-50%, -50%);text-align: center;}#tfs_loading_container * {user-select: none;-moz-user-select: none;-webkit-user-select: none;-ms-user-select: none;}@keyframes tfs-spinner {to {transform: rotate(360deg);}}#tfs_loading_spinner {height: 60px;margin: 0 auto;position: relative;}#tfs_loading_spinner:after {content: '';box-sizing: border-box;position: absolute;top: 50%;left: 50%;width: 38px;height: 38px;margin-top: -19px;margin-left: -19px;border-radius: 50%;border: 2px solid rgba(145, 145, 145, .3);border-top-color: rgba(145, 145, 145, 1);animation: tfs-spinner 1.5s linear infinite;}#tfs_loading_text {font-size: 14px;color: #727272;}#tfs_loading_text:focus {outline: none;}#tfs_loading_close_button {display: none;line-height: 34px;border: none;background: #727272;color: #fafafa;border-radius: 5px;font-size: 13px;margin: 10px auto 0px;padding: 0px 20px;font-weight: bold;cursor: pointer;vertical-align: middle;outline: none;}</style><div id='tfs_loading_container' class='tfs_status_default'><div id='tfs_loading_spinner' aria-hidden></div><div id='tfs_loading_text' aria-live='polite' tabindex='-1'><!-- PRE_RENDER_LOADING --></div><button id='tfs_loading_close_button' type='button'><!-- PRE_RENDER_CLOSE --></button></div>";
+                _doc.getElementById('tfs_container_root_pre').innerHTML = _htmlLoadingTemplate;
+                _doc.getElementById('tfs_loading_text').focus();
+            }
+            )();
+        </script>
+        <script>
+            /*! For license information please see apploader.min.js.LICENSE */
+            !function(e) {
+                var t = {};
+                function n(r) {
+                    if (t[r])
+                        return t[r].exports;
+                    var a = t[r] = {
+                        i: r,
+                        l: !1,
+                        exports: {}
+                    };
+                    return e[r].call(a.exports, a, a.exports, n),
+                    a.l = !0,
+                    a.exports
+                }
+                n.m = e,
+                n.c = t,
+                n.d = function(e, t, r) {
+                    n.o(e, t) || Object.defineProperty(e, t, {
+                        enumerable: !0,
+                        get: r
+                    })
+                }
+                ,
+                n.r = function(e) {
+                    "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
+                        value: "Module"
+                    }),
+                    Object.defineProperty(e, "__esModule", {
+                        value: !0
+                    })
+                }
+                ,
+                n.t = function(e, t) {
+                    if (1 & t && (e = n(e)),
+                    8 & t)
+                        return e;
+                    if (4 & t && "object" == typeof e && e && e.__esModule)
+                        return e;
+                    var r = Object.create(null);
+                    if (n.r(r),
+                    Object.defineProperty(r, "default", {
+                        enumerable: !0,
+                        value: e
+                    }),
+                    2 & t && "string" != typeof e)
+                        for (var a in e)
+                            n.d(r, a, function(t) {
+                                return e[t]
+                            }
+                            .bind(null, a));
+                    return r
+                }
+                ,
+                n.n = function(e) {
+                    var t = e && e.__esModule ? function() {
+                        return e.default
+                    }
+                    : function() {
+                        return e
+                    }
+                    ;
+                    return n.d(t, "a", t),
+                    t
+                }
+                ,
+                n.o = function(e, t) {
+                    return Object.prototype.hasOwnProperty.call(e, t)
+                }
+                ,
+                n.p = ".",
+                n(n.s = 631)
+            }({
+                108: function(e, t) {
+                    var n, r, a = e.exports = {};
+                    function i() {
+                        throw new Error("setTimeout has not been defined")
+                    }
+                    function o() {
+                        throw new Error("clearTimeout has not been defined")
+                    }
+                    function s(e) {
+                        if (n === setTimeout)
+                            return setTimeout(e, 0);
+                        if ((n === i || !n) && setTimeout)
+                            return n = setTimeout,
+                            setTimeout(e, 0);
+                        try {
+                            return n(e, 0)
+                        } catch (t) {
+                            try {
+                                return n.call(null, e, 0)
+                            } catch (t) {
+                                return n.call(this, e, 0)
+                            }
+                        }
+                    }
+                    !function() {
+                        try {
+                            n = "function" == typeof setTimeout ? setTimeout : i
+                        } catch (e) {
+                            n = i
+                        }
+                        try {
+                            r = "function" == typeof clearTimeout ? clearTimeout : o
+                        } catch (e) {
+                            r = o
+                        }
+                    }();
+                    var c, u = [], l = !1, f = -1;
+                    function d() {
+                        l && c && (l = !1,
+                        c.length ? u = c.concat(u) : f = -1,
+                        u.length && E())
+                    }
+                    function E() {
+                        if (!l) {
+                            var e = s(d);
+                            l = !0;
+                            for (var t = u.length; t; ) {
+                                for (c = u,
+                                u = []; ++f < t; )
+                                    c && c[f].run();
+                                f = -1,
+                                t = u.length
+                            }
+                            c = null,
+                            l = !1,
+                            function(e) {
+                                if (r === clearTimeout)
+                                    return clearTimeout(e);
+                                if ((r === o || !r) && clearTimeout)
+                                    return r = clearTimeout,
+                                    clearTimeout(e);
+                                try {
+                                    r(e)
+                                } catch (t) {
+                                    try {
+                                        return r.call(null, e)
+                                    } catch (t) {
+                                        return r.call(this, e)
+                                    }
+                                }
+                            }(e)
+                        }
+                    }
+                    function p(e, t) {
+                        this.fun = e,
+                        this.array = t
+                    }
+                    function m() {}
+                    a.nextTick = function(e) {
+                        var t = new Array(arguments.length - 1);
+                        if (arguments.length > 1)
+                            for (var n = 1; n < arguments.length; n++)
+                                t[n - 1] = arguments[n];
+                        u.push(new p(e,t)),
+                        1 !== u.length || l || s(E)
+                    }
+                    ,
+                    p.prototype.run = function() {
+                        this.fun.apply(null, this.array)
+                    }
+                    ,
+                    a.title = "browser",
+                    a.browser = !0,
+                    a.env = {},
+                    a.argv = [],
+                    a.version = "",
+                    a.versions = {},
+                    a.on = m,
+                    a.addListener = m,
+                    a.once = m,
+                    a.off = m,
+                    a.removeListener = m,
+                    a.removeAllListeners = m,
+                    a.emit = m,
+                    a.prependListener = m,
+                    a.prependOnceListener = m,
+                    a.listeners = function(e) {
+                        return []
+                    }
+                    ,
+                    a.binding = function(e) {
+                        throw new Error("process.binding is not supported")
+                    }
+                    ,
+                    a.cwd = function() {
+                        return "/"
+                    }
+                    ,
+                    a.chdir = function(e) {
+                        throw new Error("process.chdir is not supported")
+                    }
+                    ,
+                    a.umask = function() {
+                        return 0
+                    }
+                },
+                11: function(e, t, n) {
+                    "use strict";
+                    function r(e) {
+                        return (r = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
+                            return typeof e
+                        }
+                        : function(e) {
+                            return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
+                        }
+                        )(e)
+                    }
+                    function a(e, t) {
+                        for (var n = 0; n < t.length; n++) {
+                            var r = t[n];
+                            r.enumerable = r.enumerable || !1,
+                            r.configurable = !0,
+                            "value"in r && (r.writable = !0),
+                            Object.defineProperty(e, r.key, r)
+                        }
+                    }
+                    function i(e, t, n) {
+                        return t && a(e.prototype, t),
+                        n && a(e, n),
+                        Object.defineProperty(e, "prototype", {
+                            writable: !1
+                        }),
+                        e
+                    }
+                    var o = i((function e() {
+                        var t = this;
+                        !function(e, t) {
+                            if (!(e instanceof t))
+                                throw new TypeError("Cannot call a class as a function")
+                        }(this, e),
+                        this.isObject = function(e) {
+                            return "object" === r(e) && null !== e && !t.isArray(e)
+                        }
+                        ,
+                        this.isString = function(e) {
+                            return "string" == typeof e
+                        }
+                        ,
+                        this.isNumber = function(e) {
+                            return "number" == typeof e
+                        }
+                        ,
+                        this.isArray = Array.isArray,
+                        this.isBoolean = function(e) {
+                            return "boolean" == typeof e
+                        }
+                        ,
+                        this.isFunction = function(e) {
+                            return "function" == typeof e
+                        }
+                    }
+                    ));
+                    t.a = new o
+                },
+                13: function(e, t, n) {
+                    "use strict";
+                    (function(e, r) {
+                        var a = n(8);
+                        function i(e, t) {
+                            for (var n = 0; n < t.length; n++) {
+                                var r = t[n];
+                                r.enumerable = r.enumerable || !1,
+                                r.configurable = !0,
+                                "value"in r && (r.writable = !0),
+                                Object.defineProperty(e, r.key, r)
+                            }
+                        }
+                        function o(e, t, n) {
+                            return t && i(e.prototype, t),
+                            n && i(e, n),
+                            Object.defineProperty(e, "prototype", {
+                                writable: !1
+                            }),
+                            e
+                        }
+                        function s(e, t) {
+                            if (!(e instanceof t))
+                                throw new TypeError("Cannot call a class as a function")
+                        }
+                        function c(e, t) {
+                            if (t && ("object" === p(t) || "function" == typeof t))
+                                return t;
+                            if (void 0 !== t)
+                                throw new TypeError("Derived constructors may only return object or undefined");
+                            return function(e) {
+                                if (void 0 === e)
+                                    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                return e
+                            }(e)
+                        }
+                        function u(e) {
+                            var t = "function" == typeof Map ? new Map : void 0;
+                            return (u = function(e) {
+                                if (null === e || (n = e,
+                                -1 === Function.toString.call(n).indexOf("[native code]")))
+                                    return e;
+                                var n;
+                                if ("function" != typeof e)
+                                    throw new TypeError("Super expression must either be null or a function");
+                                if (void 0 !== t) {
+                                    if (t.has(e))
+                                        return t.get(e);
+                                    t.set(e, r)
+                                }
+                                function r() {
+                                    return l(e, arguments, E(this).constructor)
+                                }
+                                return r.prototype = Object.create(e.prototype, {
+                                    constructor: {
+                                        value: r,
+                                        enumerable: !1,
+                                        writable: !0,
+                                        configurable: !0
+                                    }
+                                }),
+                                d(r, e)
+                            }
+                            )(e)
+                        }
+                        function l(e, t, n) {
+                            return (l = f() ? Reflect.construct : function(e, t, n) {
+                                var r = [null];
+                                r.push.apply(r, t);
+                                var a = new (Function.bind.apply(e, r));
+                                return n && d(a, n.prototype),
+                                a
+                            }
+                            ).apply(null, arguments)
+                        }
+                        function f() {
+                            if ("undefined" == typeof Reflect || !Reflect.construct)
+                                return !1;
+                            if (Reflect.construct.sham)
+                                return !1;
+                            if ("function" == typeof Proxy)
+                                return !0;
+                            try {
+                                return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], (function() {}
+                                ))),
+                                !0
+                            } catch (e) {
+                                return !1
+                            }
+                        }
+                        function d(e, t) {
+                            return (d = Object.setPrototypeOf || function(e, t) {
+                                return e.__proto__ = t,
+                                e
+                            }
+                            )(e, t)
+                        }
+                        function E(e) {
+                            return (E = Object.setPrototypeOf ? Object.getPrototypeOf : function(e) {
+                                return e.__proto__ || Object.getPrototypeOf(e)
+                            }
+                            )(e)
+                        }
+                        function p(e) {
+                            return (p = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
+                                return typeof e
+                            }
+                            : function(e) {
+                                return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
+                            }
+                            )(e)
+                        }
+                        var m = function() {}
+                          , T = window
+                          , h = r;
+                        var y = function(e) {
+                            if (!T)
+                                return {
+                                    isNode: null !== h && "object" === p(h) && null !== h.versions && "object" === p(h.versions) && void 0 !== h.versions.node,
+                                    ieVersion: -1,
+                                    safariVersion: -1,
+                                    chromeVersion: -1,
+                                    isMobileSafari: !1,
+                                    isAndroidTablet: !1,
+                                    isAndroid: !1,
+                                    isIpad: !1,
+                                    isTablet: !1,
+                                    iosVersion: -1,
+                                    isPhone: !1,
+                                    getDevice: "unknown"
+                                };
+                            var t, n, r = /.*Trident.*rv:(\d+)/, a = /Edge\/(\d+)\./, i = function() {
+                                var t, n, i = function() {
+                                    var e, t = 3, n = document.createElement("div");
+                                    do {
+                                        t += 1,
+                                        n.innerHTML = "\x3c!--[if gt IE ".concat(t, "]><i></i><![endif]--\x3e"),
+                                        e = n.getElementsByTagName("i")
+                                    } while (e[0]);
+                                    return t > 4 ? t : void 0
+                                }();
+                                return i || (T.ActiveXObject ? 10 : ((n = r.exec(e)) && (t = parseInt(n[1], 10)),
+                                (n = a.exec(e)) && (t = parseInt(n[1], 10)),
+                                t))
+                            }();
+                            /Safari\/([0-9.]+)/.test(e) && /Version\/([0-9.]+)/.test(e) && (t = RegExp.$1),
+                            /Chrome\/([0-9.]+)/.test(e) && (n = RegExp.$1,
+                            t = void 0),
+                            i && (document.documentElement.className += " ie".concat(i));
+                            var o = -1 !== e.indexOf("AppleWebKit") && e.match(/(iPod|iPhone|iPad)/)
+                              , s = -1 !== e.indexOf("Android")
+                              , c = s && -1 === e.indexOf("Mobile")
+                              , u = e.match(/(Macintosh)/)
+                              , l = o && "iPad" === o[0] || u && navigator.maxTouchPoints > 0
+                              , f = c || l
+                              , d = (s || o) && !f
+                              , E = e.match(/OS (\d+)_(\d+)_?(\d+)?/)
+                              , m = o && E && E.length > 1 ? parseInt(E[1], 10) : 0
+                              , y = e.indexOf("Android") >= 0 ? parseInt(e.slice(e.indexOf("Android") + 8), 10) : 0
+                              , v = function(e) {
+                                return !!e
+                            };
+                            return {
+                                ieVersion: i,
+                                safariVersion: t,
+                                chromeVersion: n,
+                                isMobileSafari: v(o),
+                                isAndroidTablet: c,
+                                isAndroid: s,
+                                isIpad: v(l),
+                                isTablet: v(f),
+                                iosVersion: m,
+                                androidVersion: y,
+                                isPhone: v(d),
+                                isMac: v(u),
+                                getDevice: function() {
+                                    var e = "desktop";
+                                    return d && (e = "phone"),
+                                    f && (e = "tablet"),
+                                    e
+                                }
+                            }
+                        }
+                          , v = function(e) {
+                            !function(e, t) {
+                                if ("function" != typeof t && null !== t)
+                                    throw new TypeError("Super expression must either be null or a function");
+                                e.prototype = Object.create(t && t.prototype, {
+                                    constructor: {
+                                        value: e,
+                                        writable: !0,
+                                        configurable: !0
+                                    }
+                                }),
+                                Object.defineProperty(e, "prototype", {
+                                    writable: !1
+                                }),
+                                t && d(e, t)
+                            }(a, e);
+                            var t, n, r = (t = a,
+                            n = f(),
+                            function() {
+                                var e, r = E(t);
+                                if (n) {
+                                    var a = E(this).constructor;
+                                    e = Reflect.construct(r, arguments, a)
+                                } else
+                                    e = r.apply(this, arguments);
+                                return c(this, e)
+                            }
+                            );
+                            function a(e) {
+                                var t;
+                                return s(this, a),
+                                (t = r.call(this)).message = e,
+                                t.name = "InvalidCharacterError",
+                                t
+                            }
+                            return o(a)
+                        }(u(Error))
+                          , I = o((function t() {
+                            s(this, t),
+                            T && function() {
+                                if (!T.location.origin) {
+                                    var t = T.location.port
+                                      , n = "";
+                                    t && "80" !== t && "443" !== t && (n = ":".concat(t)),
+                                    T.location.origin = "".concat(T.location.protocol, "//").concat(T.location.hostname).concat(n)
+                                }
+                                T.console || (T.console = {
+                                    log: m,
+                                    debug: m,
+                                    warn: m,
+                                    error: m
+                                }),
+                                T.onbeforeunload || (T.onbeforeunload = m),
+                                document.head || (document.head = document.getElementsByTagName("head")[0]),
+                                Array.isArray || (Array.isArray = function(e) {
+                                    return "[object Array]" === Object.prototype.toString.call(e)
+                                }
+                                );
+                                var r = e.Element ? "Element" : "HTMLElement";
+                                if (!("dataset"in document.createElement("span")) && r in e && e[r].prototype && Object.defineProperty && Object.defineProperty(e[r].prototype, "dataset", {
+                                    get: function() {
+                                        for (var e = Object.create(null), t = 0; t < this.attributes.length; ++t) {
+                                            var n = this.attributes[t];
+                                            n.specified && "data-" === n.name.substring(0, 5) && function(t, n) {
+                                                var r = n.replace(/-([a-z])/g, (function(e, t) {
+                                                    return t.toUpperCase()
+                                                }
+                                                ));
+                                                e[r] = t.getAttribute("data-".concat(n)),
+                                                Object.defineProperty(e, r, {
+                                                    get: function() {
+                                                        return t.getAttribute("data-".concat(n))
+                                                    },
+                                                    set: function(e) {
+                                                        t.setAttribute("data-".concat(n), e)
+                                                    }
+                                                })
+                                            }(this, n.name.substring(5))
+                                        }
+                                        return e
+                                    }
+                                }),
+                                T.NodeList && !T.NodeList.prototype.forEach && (T.NodeList.prototype.forEach = T.Array.prototype.forEach),
+                                "function" != typeof T.CustomEvent) {
+                                    var a = function(e, t) {
+                                        var n = t || {
+                                            bubbles: !1,
+                                            cancelable: !1,
+                                            detail: void 0
+                                        }
+                                          , r = document.createEvent("CustomEvent");
+                                        return r.initCustomEvent(e, n.bubbles, n.cancelable, n.detail),
+                                        r
+                                    };
+                                    a.prototype = T.Event.prototype,
+                                    T.CustomEvent = a
+                                }
+                                if (!T.atob && !T.btoa) {
+                                    var i = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+                                    T.btoa = function(e) {
+                                        for (var t, n, r = String(e), a = 0, o = i, s = ""; r.charAt(0 | a) || (o = "=",
+                                        a % 1); s += o.charAt(63 & t >> 8 - a % 1 * 8)) {
+                                            if ((n = r.charCodeAt(a += 3 / 4)) > 255)
+                                                throw new v("'btoa' failed: The string to be encoded contains characters outside of the Latin1 range.");
+                                            t = t << 8 | n
+                                        }
+                                        return s
+                                    }
+                                    ,
+                                    T.atob = function(e) {
+                                        var t = String(e).replace(/=+$/, "");
+                                        if (t.length % 4 == 1)
+                                            throw new v("'atob' failed: The string to be decoded is not correctly encoded.");
+                                        for (var n, r, a = 0, o = 0, s = ""; r = t.charAt(o++); ~r && (n = a % 4 ? 64 * n + r : r,
+                                        a++ % 4) ? s += String.fromCharCode(255 & n >> (-2 * a & 6)) : 0)
+                                            r = i.indexOf(r);
+                                        return s
+                                    }
+                                }
+                            }(),
+                            Object(a.a)(this, y(T.navigator.userAgent))
+                        }
+                        ));
+                        t.a = new I
+                    }
+                    ).call(this, n(75), n(108))
+                },
+                143: function(e, t, n) {
+                    "use strict";
+                    var r = n(3)
+                      , a = n(5)
+                      , i = n(11)
+                      , o = n(4)
+                      , s = n(8)
+                      , c = n(13)
+                      , u = n(39)
+                      , l = n(9)
+                      , f = n(161);
+                    function d(e, t) {
+                        for (var n = 0; n < t.length; n++) {
+                            var r = t[n];
+                            r.enumerable = r.enumerable || !1,
+                            r.configurable = !0,
+                            "value"in r && (r.writable = !0),
+                            Object.defineProperty(e, r.key, r)
+                        }
+                    }
+                    var E = ["localStorage", "sessionStorage"]
+                      , p = function() {
+                        function e(t, n) {
+                            if (function(e, t) {
+                                if (!(e instanceof t))
+                                    throw new TypeError("Cannot call a class as a function")
+                            }(this, e),
+                            -1 === E.indexOf(t))
+                                throw new Error("WebStorage: ".concat(t, " is not supported"));
+                            if (this._storeName = t,
+                            this._store = window[t],
+                            this._storageKey = n,
+                            !this.isStorageAvailable())
+                                throw new Error(a.a.ERROR_CODES.LOCALSTORAGE_UNAVAILABLE);
+                            this._storeExists() || this._initialize()
+                        }
+                        var t, n, p;
+                        return t = e,
+                        (n = [{
+                            key: "_storeExists",
+                            value: function() {
+                                return !!this._store.getItem(this._storageKey)
+                            }
+                        }, {
+                            key: "_initialize",
+                            value: function() {
+                                var e = {};
+                                e[a.a.LAST_UPDATED_TIME] = (new Date).getTime(),
+                                this._store.setItem(this._storageKey, u.a.encode(JSON.stringify(e)))
+                            }
+                        }, {
+                            key: "set",
+                            value: function(e, t) {
+                                var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+                                r.a.notEmpty(e, "WebStorage: set key");
+                                var o = this.getAll() || {};
+                                if (this._pollOldValue = o,
+                                i.a.isObject(t))
+                                    o[e] || (o[e] = {}),
+                                    o[e] = Object(s.a)({}, o[e], t);
+                                else if (i.a.isString(t) || i.a.isArray(t))
+                                    o[e] = t;
+                                else {
+                                    if (!i.a.isBoolean(t) && !i.a.isNumber(t))
+                                        throw new Error('WebStorage::set type-mismatch for "'.concat(t, '", expecting object, string, boolean, array or number'));
+                                    o[e] = t.toString()
+                                }
+                                o[a.a.LAST_UPDATED_TIME] = (new Date).getTime(),
+                                n.tabId && (o[a.a.SOURCE] = n.tabId),
+                                this._store.setItem(this._storageKey, u.a.encode(JSON.stringify(o)))
+                            }
+                        }, {
+                            key: "getAll",
+                            value: function() {
+                                var e, t = this._store.getItem(this._storageKey);
+                                if (t)
+                                    try {
+                                        e = JSON.parse(u.a.decode(t))
+                                    } catch (e) {}
+                                return e
+                            }
+                        }, {
+                            key: "get",
+                            value: function(e) {
+                                return r.a.notEmpty(e, "WebStorage: key"),
+                                this.getAll()[e]
+                            }
+                        }, {
+                            key: "remove",
+                            value: function(e, t) {
+                                var n = this.getAll() || {};
+                                t && t.length > 0 ? n[e] = o.a.removeSpecificKeys(n[e], t) : n[e] = {},
+                                this._store.setItem(this._storageKey, u.a.encode(JSON.stringify(n)))
+                            }
+                        }, {
+                            key: "addStorageListener",
+                            value: function(e) {
+                                var t = this;
+                                c.a.ieVersion && 9 !== c.a.isVersion ? this._pollForStorage(e) : window.addEventListener("storage", (function(n) {
+                                    if (n.key === t._storageKey)
+                                        try {
+                                            var r = JSON.parse(u.a.decode(n.oldValue)) || {}
+                                              , a = JSON.parse(u.a.decode(n.newValue)) || {};
+                                            e({
+                                                key: t._storageKey,
+                                                oldValue: r,
+                                                newValue: a
+                                            })
+                                        } catch (e) {}
+                                }
+                                ))
+                            }
+                        }, {
+                            key: "_pollForStorage",
+                            value: function(e) {
+                                var t = this;
+                                l.a.requestTimeout((function() {
+                                    try {
+                                        t._store.setItem("tfs-ie11", "1"),
+                                        t._store.removeItem("tfs-ie11"),
+                                        JSON.stringify(t._pollOldValue) !== JSON.stringify(t.getAll()) && (e({
+                                            newValue: t.getAll() || {},
+                                            oldValue: t._pollOldValue || {},
+                                            key: t._storageKey
+                                        }),
+                                        t._pollOldValue = t.getAll())
+                                    } catch (e) {}
+                                    t._pollForStorage(e)
+                                }
+                                ), 500)
+                            }
+                        }, {
+                            key: "isStorageAvailable",
+                            value: function() {
+                                return f.a[this._storeName]
+                            }
+                        }]) && d(t.prototype, n),
+                        p && d(t, p),
+                        Object.defineProperty(t, "prototype", {
+                            writable: !1
+                        }),
+                        e
+                    }();
+                    t.a = p
+                },
+                161: function(e, t, n) {
+                    "use strict";
+                    var r = function(e) {
+                        var t = !1;
+                        try {
+                            var n = window[e];
+                            n.setItem("testLS", "works");
+                            var r = n.getItem("testLS");
+                            n.removeItem("testLS"),
+                            t = "works" === r
+                        } catch (e) {}
+                        return t
+                    };
+                    t.a = {
+                        localStorage: r("localStorage"),
+                        sessionStorage: r("sessionStorage")
+                    }
+                },
+                18: function(e, t, n) {
+                    "use strict";
+                    var r = n(5)
+                      , a = n(13)
+                      , i = n(3)
+                      , o = n(9)
+                      , s = n(8)
+                      , c = n(4);
+                    function u(e) {
+                        return (u = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
+                            return typeof e
+                        }
+                        : function(e) {
+                            return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
+                        }
+                        )(e)
+                    }
+                    function l(e, t) {
+                        for (var n = 0; n < t.length; n++) {
+                            var r = t[n];
+                            r.enumerable = r.enumerable || !1,
+                            r.configurable = !0,
+                            "value"in r && (r.writable = !0),
+                            Object.defineProperty(e, r.key, r)
+                        }
+                    }
+                    var f = function() {
+                        function e() {
+                            !function(e, t) {
+                                if (!(e instanceof t))
+                                    throw new TypeError("Cannot call a class as a function")
+                            }(this, e)
+                        }
+                        var t, n, f;
+                        return t = e,
+                        (n = [{
+                            key: "trim",
+                            value: function(e) {
+                                return e.replace(/^\s+|\s+$/g, "")
+                            }
+                        }, {
+                            key: "addStylesheet",
+                            value: function(e, t) {
+                                i.a.notEmpty(e, "addStylesheet id"),
+                                i.a.notEmpty(t, "addStylesheet cssText");
+                                var n = this.createElement("style", {
+                                    id: e,
+                                    type: "text/css"
+                                });
+                                try {
+                                    n.styleSheet ? n.styleSheet.cssText = t : n.appendChild(document.createTextNode(t)),
+                                    document.head.appendChild(n)
+                                } catch (e) {}
+                                return n
+                            }
+                        }, {
+                            key: "get",
+                            value: function(e) {
+                                return document.getElementById(e)
+                            }
+                        }, {
+                            key: "createElement",
+                            value: function(e) {
+                                var t = this
+                                  , n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}
+                                  , r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : []
+                                  , a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : document
+                                  , i = a.createElement(e);
+                                return Object.keys(n).map((function(e) {
+                                    return i.setAttribute(e, n[e]),
+                                    0
+                                }
+                                )),
+                                "string" == typeof r ? i.innerHTML = r : r.forEach((function(e) {
+                                    var n = e;
+                                    n instanceof HTMLElement || (n = t.createElement(n.tag, n.attr, n.children, a)),
+                                    i.appendChild(n)
+                                }
+                                )),
+                                i
+                            }
+                        }, {
+                            key: "removeElement",
+                            value: function(e) {
+                                var t = e;
+                                "string" == typeof t && (t = this.get(t)),
+                                t && t.parentNode.removeChild(t)
+                            }
+                        }, {
+                            key: "addClass",
+                            value: function(e, t) {
+                                var n = this.trim(t)
+                                  , r = e;
+                                r && ("string" == typeof r && (r = this.get(r)),
+                                r.classList ? r.classList.add(n) : r.className += " ".concat(n))
+                            }
+                        }, {
+                            key: "removeClass",
+                            value: function(e, t) {
+                                var n = this.trim(t)
+                                  , r = e;
+                                r && ("string" == typeof r && (r = this.get(r)),
+                                r.classList ? r.classList.remove(t) : r.className = r.className.replace(new RegExp("(^|\\b)(\\s*)".concat(n.split(" ").join("(\\s*)|(\\s*)"), "(\\s*)(\\b|$)"),"g"), " "))
+                            }
+                        }, {
+                            key: "hasClass",
+                            value: function(e, t) {
+                                var n = this.trim(t)
+                                  , r = e;
+                                return "string" == typeof r && (r = this.get(r)),
+                                r.classList ? r.classList.contains(n) : new RegExp("(^| )".concat(n, "( |$)"),"gi").test(r.className)
+                            }
+                        }, {
+                            key: "hasSelector",
+                            value: function(e, t) {
+                                return ("string" == typeof e ? this.createElement("div", void 0, e) : e).querySelectorAll(t).length > 0
+                            }
+                        }, {
+                            key: "hide",
+                            value: function(e) {
+                                var t = e;
+                                "string" == typeof t && (t = this.get(t)),
+                                t.style.display = "none"
+                            }
+                        }, {
+                            key: "show",
+                            value: function(e) {
+                                var t = e;
+                                "string" == typeof t && (t = this.get(t)),
+                                t.style.display = "block"
+                            }
+                        }, {
+                            key: "getStyle",
+                            value: function(e, t) {
+                                return window.getComputedStyle(e)[t]
+                            }
+                        }, {
+                            key: "set",
+                            value: function(e, t, n) {
+                                e && "string" == typeof t && "string" == typeof n && (e.style[t] = n)
+                            }
+                        }, {
+                            key: "setStyle",
+                            value: function(e, t) {
+                                var n = this
+                                  , r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                                if (e)
+                                    switch (r && e.setAttribute("style", ""),
+                                    u(t)) {
+                                    case "object":
+                                        Object.keys(t).map((function(r) {
+                                            return Object.prototype.hasOwnProperty.call(t, r) && n.set(e, r, t[r]),
+                                            0
+                                        }
+                                        ));
+                                        break;
+                                    case "string":
+                                        e.setAttribute("style", e.style.cssText + t)
+                                    }
+                            }
+                        }, {
+                            key: "injectScript",
+                            value: function(e) {
+                                var t = this
+                                  , n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function() {}
+                                  , r = arguments.length > 2 ? arguments[2] : void 0
+                                  , a = arguments.length > 3 ? arguments[3] : void 0
+                                  , c = arguments.length > 4 ? arguments[4] : void 0;
+                                i.a.notEmpty(e, "injectScript url"),
+                                i.a.isNotUndefinedOrNull(r.head, "document.head");
+                                var u = !1;
+                                if (this.get(a.id))
+                                    n("success");
+                                else {
+                                    var l, f = this.createElement("script", Object(s.a)({}, a, {
+                                        async: !0,
+                                        src: e,
+                                        type: "text/javascript"
+                                    }));
+                                    r.head.appendChild(f),
+                                    f.onreadystatechange = function() {
+                                        u || t.readyState && "loaded" !== t.readyState && "complete" !== t.readyState || (u = !0,
+                                        l && o.a.clearRequestTimeout(l),
+                                        n("success"),
+                                        f.onreadystatechange = null)
+                                    }
+                                    ,
+                                    f.onload = function() {
+                                        u || t.readyState && "loaded" !== t.readyState && "complete" !== t.readyState || (u = !0,
+                                        l && o.a.clearRequestTimeout(l),
+                                        n("success"),
+                                        f.onload = null)
+                                    }
+                                    ,
+                                    f.onerror = function() {
+                                        f.onreadystatechange = null,
+                                        f.onload = null,
+                                        l && o.a.clearRequestTimeout(l),
+                                        n("error")
+                                    }
+                                    ,
+                                    c && (l = o.a.requestTimeout((function() {
+                                        f.onreadystatechange = null,
+                                        f.onload = null,
+                                        n("timeout")
+                                    }
+                                    ), c))
+                                }
+                            }
+                        }, {
+                            key: "reduceTags",
+                            value: function(e) {
+                                var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : []
+                                  , n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}
+                                  , r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [];
+                                i.a.isArray(t, "reduceTags allowedTags"),
+                                i.a.isObject(n, "reduceTags allowedAttributes"),
+                                i.a.isArray(r, "reduceTags purgeTags");
+                                var a = this.createElement("div", {}, e)
+                                  , o = a.childNodes
+                                  , s = [];
+                                if (o.length > 0)
+                                    for (var c = 0; c < o.length; c += 1) {
+                                        var u = o[c]
+                                          , l = u.nodeName.toLowerCase();
+                                        if ((u = Array.isArray(n[l]) ? this.removeAttrs(u, n[l]) : this.removeAttrs(u, [])).hasChildNodes() && -1 === r.indexOf(l))
+                                            if (1 === u.childNodes.length && "#text" === u.childNodes[0].nodeName)
+                                                t.indexOf(l) > -1 ? s.push(u.outerHTML) : s.push(u.textContent);
+                                            else {
+                                                var f = u.innerHTML.indexOf("<")
+                                                  , d = "";
+                                                f > 0 && (d = u.innerHTML.substr(0, f),
+                                                u.innerHTML = u.innerHTML.substr(f));
+                                                var E = u.innerHTML.lastIndexOf(">")
+                                                  , p = "";
+                                                p = u.innerHTML.substr(E + 1),
+                                                u.innerHTML = u.innerHTML.substr(0, E + 1),
+                                                t.indexOf(l) > -1 ? (u.innerHTML = d + this.reduceTags(u.innerHTML, t, n, r) + p,
+                                                s.push(u.outerHTML)) : s.push(d + this.reduceTags(u.innerHTML, t, n, r) + p)
+                                            }
+                                        else {
+                                            var m = l;
+                                            -1 === r.indexOf(m) && (t.indexOf(m) > -1 ? s.push(u.outerHTML) : s.push(u.textContent))
+                                        }
+                                    }
+                                else
+                                    s.push(e);
+                                return s.join(" ").trim()
+                            }
+                        }, {
+                            key: "removeAttrs",
+                            value: function(e, t) {
+                                var n = e;
+                                if (n.attributes)
+                                    for (var r = n.attributes, a = r.length - 1; a >= 0; a -= 1)
+                                        -1 === t.indexOf(r[a].name) && n.removeAttribute(r[a].name);
+                                return n
+                            }
+                        }, {
+                            key: "removeCSSProp",
+                            value: function(e, t) {
+                                var n = e.match(/([^\s{]+?(?=:))(:\s)([^;]*);/g)
+                                  , r = "";
+                                return n && n.forEach((function(e) {
+                                    var n = e.split(":")[0];
+                                    t.indexOf(n) > -1 && (r += e)
+                                }
+                                )),
+                                r
+                            }
+                        }, {
+                            key: "fixAnchorTarget",
+                            value: function(e) {
+                                var t, n = this.createElement("div", {}, e), r = n.getElementsByTagName("a");
+                                if (r.length > 0) {
+                                    for (var a = 0; a < r.length; a += 1) {
+                                        var i = r[a].getAttribute("target");
+                                        c.a.isEmptyOrNull(i) && r[a].setAttribute("target", "_blank")
+                                    }
+                                    t = n.innerHTML
+                                } else
+                                    t = e;
+                                return t
+                            }
+                        }, {
+                            key: "filterAttrOfTag",
+                            value: function(e, t, n) {
+                                var r = this
+                                  , a = this.createElement("div", {}, e)
+                                  , i = a.getElementsByTagName(t)
+                                  , o = []
+                                  , s = [].slice.call(i);
+                                return 0 === s.length ? {
+                                    residueContent: a.innerHTML
+                                } : (s.map((function(e) {
+                                    var t = {};
+                                    return n.map((function(n) {
+                                        var r = c.a.isEmptyOrNull(e.getAttribute(n)) ? e.getAttribute(n) : e.getAttribute(n).trim();
+                                        return t[n] = c.a.isEmptyOrNull(e.dataset) || c.a.isEmptyOrNull(e.dataset[n]) ? r : e.dataset[n].trim(),
+                                        0
+                                    }
+                                    )),
+                                    t.innerHTML = e.innerHTML.trim(),
+                                    o.push(t),
+                                    r.removeElement(e),
+                                    0
+                                }
+                                )),
+                                {
+                                    residueContent: o.length > 0 && "" === a.textContent.trim() && 0 === a.getElementsByTagName("img").length ? void 0 : a.innerHTML,
+                                    tagAttributes: o
+                                })
+                            }
+                        }, {
+                            key: "redrawElement",
+                            value: function(e, t, n) {
+                                var r = this;
+                                return e ? (this.setStyle(e, t),
+                                o.a.requestTimeout((function() {
+                                    r.setStyle(e, n)
+                                }
+                                ), 40),
+                                0) : 0
+                            }
+                        }, {
+                            key: "getOrientation",
+                            value: function() {
+                                switch (a.a.isMobileSafari || a.a.isIpad ? Math.abs(window.orientation) : screen.width > screen.height ? 90 : 0) {
+                                case 90:
+                                    return r.a.ORIENTATIONS.LANDSCAPE;
+                                default:
+                                    return r.a.ORIENTATIONS.PORTRAIT
+                                }
+                            }
+                        }, {
+                            key: "getScreenDimensions",
+                            value: function() {
+                                var e, t;
+                                return this.getOrientation() === r.a.ORIENTATIONS.PORTRAIT ? (t = screen.height > screen.width ? screen.height : screen.width,
+                                e = screen.height > screen.width ? screen.width : screen.height) : (t = screen.height > screen.width ? screen.width : screen.height,
+                                e = screen.height > screen.width ? screen.height : screen.width),
+                                {
+                                    width: e,
+                                    height: t
+                                }
+                            }
+                        }, {
+                            key: "getKeyboardHeight",
+                            value: function() {
+                                var e = this.getOrientation()
+                                  , t = Object.keys(r.a.ORIENTATIONS).reduce((function(t, n) {
+                                    return e === r.a.ORIENTATIONS[n] ? n : t
+                                }
+                                ))
+                                  , n = window.innerHeight;
+                                if (a.a.isIpad) {
+                                    var i = r.a.MAX_KEYBOARD_HEIGHT[t].filter((function(e) {
+                                        return n >= e.MIN_SCREEN_HEIGHT && n <= e.MAX_SCREEN_HEIGHT
+                                    }
+                                    ));
+                                    if (i.length)
+                                        return i[0].KEYBOARD_HEIGHT
+                                }
+                                return 0
+                            }
+                        }, {
+                            key: "matches",
+                            value: function(e, t) {
+                                for (var n = (e.document || e.ownerDocument).querySelectorAll(t), r = n.length; r >= 0 && n.item(r) !== e; )
+                                    r -= 1;
+                                return r > -1
+                            }
+                        }]) && l(t.prototype, n),
+                        f && l(t, f),
+                        Object.defineProperty(t, "prototype", {
+                            writable: !1
+                        }),
+                        e
+                    }();
+                    t.a = new f
+                },
+                26: function(e, t, n) {
+                    "use strict";
+                    var r = n(3);
+                    function a(e, t) {
+                        for (var n = 0; n < t.length; n++) {
+                            var r = t[n];
+                            r.enumerable = r.enumerable || !1,
+                            r.configurable = !0,
+                            "value"in r && (r.writable = !0),
+                            Object.defineProperty(e, r.key, r)
+                        }
+                    }
+                    var i = /^([a-z0-9.+-]+:)/i
+                      , o = /(https?:)\/\/([^/]+)(\/.*)*$/i
+                      , s = /(https?:\/\/[^/]+)(?:\/.+)*$/i
+                      , c = /^\s*$/
+                      , u = /\/(?!.*\/).*/
+                      , l = /^(?:(?:https?|mailto|ftp|tel|file|sms):|[^&:/?#]*(?:[/?#]|$))/gi
+                      , f = /^data:(?:image\/(?:bmp|gif|jpeg|jpg|png|tiff|webp)|video\/(?:mpeg|mp4|ogg|webm)|audio\/(?:mp3|oga|ogg|opus));base64,[a-z0-9+/]+=*$/i
+                      , d = function() {
+                        function e() {
+                            !function(e, t) {
+                                if (!(e instanceof t))
+                                    throw new TypeError("Cannot call a class as a function")
+                            }(this, e)
+                        }
+                        var t, n, d;
+                        return t = e,
+                        (n = [{
+                            key: "normalizeUrl",
+                            value: function(e) {
+                                r.a.notEmpty(e, "url");
+                                var t = window.location;
+                                return i.test(e) ? e : /^\/\/.+/.test(e) ? t.protocol + e : /^\/.+/.test(e) ? t.origin + e : t.origin + t.pathname.replace(/\/[^/]+$/, "/") + e
+                            }
+                        }, {
+                            key: "getOriginFromUrl",
+                            value: function(e) {
+                                var t;
+                                if (r.a.assert(e, "url"),
+                                e.protocol && e.hostname) {
+                                    if (!(t = e.origin)) {
+                                        var n = e.port
+                                          , a = "";
+                                        n && "80" !== n && "443" !== n && (a = ":".concat(n)),
+                                        t = "".concat(e.protocol, "//").concat(e.hostname).concat(a)
+                                    }
+                                } else
+                                    r.a.notEmpty(e, "url"),
+                                    t = this.normalizeUrl(e).replace(s, "$1");
+                                return t
+                            }
+                        }, {
+                            key: "formatUrl",
+                            value: function(e) {
+                                r.a.isObject(e, "urlObj"),
+                                r.a.notEmpty(e.origin, "urlObj.origin");
+                                var t = [e.origin];
+                                return e.pathname && t.push(e.pathname),
+                                e.search && t.push(e.search),
+                                e.hash && t.push(e.hash),
+                                t.join("")
+                            }
+                        }, {
+                            key: "parseUrl",
+                            value: function(e) {
+                                var t = this;
+                                r.a.notEmpty(e, "url");
+                                var n = this.normalizeUrl(e)
+                                  , a = o.exec(n);
+                                if (!a)
+                                    return {};
+                                var i = a[1]
+                                  , s = a[2]
+                                  , l = s.split(":");
+                                if (c.test(l[0]))
+                                    return {};
+                                if (this.sanitizeUrl(n) !== n)
+                                    return {};
+                                var f, d = "", E = "", p = "";
+                                if (a[3]) {
+                                    var m = a[3].split("?");
+                                    if (m.length > 1)
+                                        p = m[0],
+                                        f = m[1].split("#"),
+                                        d = "?".concat(f[0]),
+                                        f.length > 1 && (E = "#".concat(f[1]));
+                                    else {
+                                        var T = a[3].split("#");
+                                        p = T[0],
+                                        T.length > 1 && (E = "#".concat(T[1]))
+                                    }
+                                }
+                                var h = function(e) {
+                                    return e
+                                }
+                                  , y = function(e, t, n) {
+                                    var a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "&"
+                                      , i = arguments.length > 4 ? arguments[4] : void 0;
+                                    r.a.isObject(n, "params"),
+                                    r.a.assert(void 0 === i || "boolean" == typeof i, "invalid encodeParams value");
+                                    var o = i ? encodeURIComponent : h
+                                      , s = [];
+                                    return e.length && s.push(e.substring(1)),
+                                    Object.keys(n).map((function(e) {
+                                        return s.push("".concat(e, "=").concat(void 0 === e ? "" : o(n[e])))
+                                    }
+                                    )),
+                                    t + s.join(a)
+                                }
+                                  , v = {
+                                    protocol: i,
+                                    host: s,
+                                    hostname: l[0],
+                                    port: l[1] ? l[1] : "",
+                                    origin: "".concat(i, "//").concat(s),
+                                    pathname: p,
+                                    search: d,
+                                    hash: E,
+                                    href: n,
+                                    replaceResource: function(e) {
+                                        if (u.test(v.pathname)) {
+                                            var n = u.exec(v.pathname)[0];
+                                            v.pathname = v.pathname.replace(n, "/".concat(e))
+                                        }
+                                        return v.href = t.formatUrl(v),
+                                        v
+                                    },
+                                    secure: function() {
+                                        var e = /http:/i;
+                                        return v.origin = v.origin.replace(e, "https:"),
+                                        v.protocol = v.protocol.replace(e, "https:"),
+                                        v.href = v.href.replace(e, "https:"),
+                                        v
+                                    },
+                                    appendToHash: function(e, n) {
+                                        var r = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+                                        return v.hash = y(v.hash, "#", e, n, r),
+                                        v.href = t.formatUrl(v),
+                                        v
+                                    },
+                                    appendToSearch: function(e, n) {
+                                        var r = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+                                        return v.search = y(v.search, "?", e, n, r),
+                                        v.href = t.formatUrl(v),
+                                        v
+                                    }
+                                };
+                                return v
+                            }
+                        }, {
+                            key: "parseUrlParams",
+                            value: function(e) {
+                                var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "?";
+                                r.a.notEmpty(e, "url"),
+                                r.a.assert(void 0 === t || "?" === t || "#" === t, "invalid separator value");
+                                var n, a, i, o, s, c = {}, u = e.split(t);
+                                if (u.length > 2 && (u[1] = u.splice(1, u.length - 1).join(t)),
+                                u.length > 1)
+                                    for (n = u[1].split("&"),
+                                    i = 0; i < n.length; i += 1)
+                                        o = (a = n[i].split("="))[0],
+                                        a.splice(0, 1),
+                                        s = a.join("") || null,
+                                        c[o] = decodeURIComponent(s);
+                                return c
+                            }
+                        }, {
+                            key: "sanitizeUrl",
+                            value: function(e) {
+                                return "null" === e || 0 === e.length || "about:blank" === e ? "about:blank" : e.match(l) || e.match(f) ? e : "unsafe:".concat(e)
+                            }
+                        }]) && a(t.prototype, n),
+                        d && a(t, d),
+                        Object.defineProperty(t, "prototype", {
+                            writable: !1
+                        }),
+                        e
+                    }();
+                    t.a = new d
+                },
+                28: function(e, t, n) {
+                    "use strict";
+                    t.a = {
+                        URL_PARAMS: {
+                            CONTEXT_INFO: "contextInfo",
+                            CLIENT_KEY: "clientKey",
+                            APP_ID: "appId",
+                            RULE_ID: "ruleId",
+                            INVITE_ID: "inviteId",
+                            LOAD_CUSTOMSCRIPT: "loadCustom",
+                            FIRE_LINK_PROPERTY: "fireLinkProperty",
+                            FIRE_TARGET_DETERMINATION: "fireTargetDetermination",
+                            IS_POPUP: "isPopup",
+                            TOKEN: "token"
+                        },
+                        EXTENSIBLE: {
+                            SCRIPT_ID: "tfs-tie-extensible",
+                            PATH: "https://d2j8jkom7xmn9n.cloudfront.net/psp/platform/",
+                            DOMAIN_PROD: "d1af033869koo7.cloudfront.net",
+                            DOMAIN_STAGE: "d2j8jkom7xmn9n.cloudfront.net",
+                            SCRIPT: "247pxe.js",
+                            SCRIPT_DEBUG: "247pxe.debug.js"
+                        },
+                        TYPE_BUTTON: "BUTTON",
+                        LOCAL_STORAGE_NAME: "tfs-directchat",
+                        LOCAL_STORAGE_KEY: "directchat",
+                        DEBUG_KEY: "debug",
+                        WIDGET_STATE: {
+                            PAGE_INIT: "pageInit",
+                            WIDGET_LOADING: "widgetLoading",
+                            WIDGET_LOADED: "widgetLoaded",
+                            CHAT_REQUESTED: "chatRequested",
+                            CHAT_CONNECTING: "chatConnecting",
+                            CHAT_RECONCILING: "chatReconciling",
+                            CHAT_STARTED: "chatStarted",
+                            CHAT_INTERACTIVE: "chatInteractive",
+                            CHAT_ENDED: "chatEnded",
+                            MINIMIZED: "minimized",
+                            MAXIMIZED: "maximized",
+                            WIDGET_CLOSED: "widgetClosed"
+                        },
+                        EVENTS: {
+                            TARGET_DETERMINATION: "TargetDeterminationEvent",
+                            LINK_PROPERTY: "LinkPropertyEvent",
+                            CONNECTION_TO_AGENT: "OnlineInteractionConnectionToAgentEvent"
+                        },
+                        IVR: {
+                            ANI: "ani",
+                            PHONE_NUMBER: "phoneNumber"
+                        },
+                        STATE_CHANGE_EVENT: "stateChange",
+                        WINDOW: {
+                            TITLE: "Chat",
+                            NAME: "Chat"
+                        },
+                        ERRORS: {
+                            DEFAULT: "DEFAULT",
+                            LOADING_FAILED: "LOADING_FAILED",
+                            INVALID_SESSION: "INVALID_SESSION",
+                            SESSION_EXPIRED: "SESSION_EXPIRED",
+                            INVALID_CLIENT_KEY: "INVALID_CLIENT_KEY",
+                            INVALID_CONTEXT: "INVALID_CONTEXT",
+                            PRIVATE_BROWSING: "PRIVATE_BROWSING"
+                        },
+                        JWT_TOKEN: {
+                            EXPIRES: "expires",
+                            EXP: "exp",
+                            ISSUED_AT: "iat",
+                            ACCOUNT_ID: "accountId",
+                            BRAND_USER_ID: "brandUserId",
+                            CONTEXT: "context"
+                        },
+                        PRERENDER_ELEMENTS: {
+                            CONTAINER: "tfs_loading_container",
+                            TEXT: "tfs_loading_text",
+                            SPINNER: "tfs_loading_spinner"
+                        },
+                        I18N: {
+                            EN: {
+                                ERR_DEFAULT_TITLE: "Error",
+                                ERR_DEFAULT_DESC: "Something went wrong. Please try again later",
+                                ERR_LOADING_FAILED_TITLE: "Loading failed",
+                                ERR_LOADING_FAILED_DESC: "Something went wrong. Make sure your Internet is up and running and reload this page.",
+                                ERR_INVALID_SESSION_TITLE: "Session Error",
+                                ERR_INVALID_SESSION_DESC: "Something is not right. Session data is corrupted or missing a parameter.",
+                                ERR_SESSION_EXPIRED_TITLE: "Session Expired",
+                                ERR_SESSION_EXPIRED_DESC: "The link you are trying to use has expired. Please start the journey again from where you received this link.",
+                                ERR_INVALID_CLIENT_KEY_TITLE: "Provisioning Error",
+                                ERR_INVALID_CLIENT_KEY_DESC: "Client Key is invalid or not-provisioned",
+                                ERR_INVALID_CONTEXT_TITLE: "Invalid Context",
+                                ERR_INVALID_CONTEXT_DESC: "Context information passed seems to be missing a parameter or unreadable.",
+                                ERR_PRIVATE_BROWSING_TITLE: "Unsupported Browser Mode",
+                                ERR_PRIVATE_BROWSING_DESC: "To enable chat, open this web page in a new window that isn't using Private/Incognito mode."
+                            }
+                        }
+                    }
+                },
+                3: function(e, t, n) {
+                    "use strict";
+                    var r = n(11);
+                    function a(e) {
+                        return (a = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
+                            return typeof e
+                        }
+                        : function(e) {
+                            return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
+                        }
+                        )(e)
+                    }
+                    function i(e, t) {
+                        for (var n = 0; n < t.length; n++) {
+                            var r = t[n];
+                            r.enumerable = r.enumerable || !1,
+                            r.configurable = !0,
+                            "value"in r && (r.writable = !0),
+                            Object.defineProperty(e, r.key, r)
+                        }
+                    }
+                    var o = function() {
+                        function e() {
+                            !function(e, t) {
+                                if (!(e instanceof t))
+                                    throw new TypeError("Cannot call a class as a function")
+                            }(this, e)
+                        }
+                        var t, n, o;
+                        return t = e,
+                        (n = [{
+                            key: "assert",
+                            value: function(e) {
+                                var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "assert failed";
+                                e || c(t)
+                            }
+                        }, {
+                            key: "isObject",
+                            value: function(e, t) {
+                                var n = t ? "".concat(t, " is not an object") : "object expected";
+                                this.assert(r.a.isObject(e), n)
+                            }
+                        }, {
+                            key: "isUndefinedOrNull",
+                            value: function(e, t) {
+                                var n = t ? "".concat(t, " is not undefined or null") : "undefined or null expected";
+                                this.assert(null == e, n)
+                            }
+                        }, {
+                            key: "isNotUndefinedOrNull",
+                            value: function(e, t) {
+                                var n = t ? "".concat(t, " is undefined or null") : "undefined or null not expected";
+                                this.assert(null != e, n)
+                            }
+                        }, {
+                            key: "isBoolean",
+                            value: function(e, t) {
+                                var n = t ? "".concat(t, " is not a boolean") : "boolean expected";
+                                this.assert(r.a.isBoolean(e), n)
+                            }
+                        }, {
+                            key: "isFunction",
+                            value: function(e, t) {
+                                var n = t ? "".concat(t, " is not a function") : "function expected";
+                                this.assert(r.a.isFunction(e), n)
+                            }
+                        }, {
+                            key: "isNumber",
+                            value: function(e, t) {
+                                var n = t ? "".concat(t, " is not a number") : "number expected";
+                                this.assert(r.a.isNumber(e), n)
+                            }
+                        }, {
+                            key: "notEmpty",
+                            value: function(e, t) {
+                                var n = t ? "".concat(t, " is not a string or is empty") : "non-empty string expected";
+                                this.assert(r.a.isString(e) && !s.test(e), n)
+                            }
+                        }, {
+                            key: "instanceOf",
+                            value: function(e, t, n) {
+                                var r = n ? "expected instance of ".concat(n) : "unexpected instance type";
+                                this.assert(e instanceof t, r)
+                            }
+                        }, {
+                            key: "isScalar",
+                            value: function(e, t) {
+                                var n = a(e)
+                                  , r = "".concat(t ? "".concat(t, " ") : "", "must be string, number, or boolean");
+                                this.assert("string" === n || "number" === n || "boolean" === n, r),
+                                "string" === n && this.notEmpty(e, t)
+                            }
+                        }, {
+                            key: "isArray",
+                            value: function(e, t) {
+                                var n = t ? "".concat(t, " is not an array") : "array expected";
+                                this.assert(Array.isArray(e), n)
+                            }
+                        }]) && i(t.prototype, n),
+                        o && i(t, o),
+                        Object.defineProperty(t, "prototype", {
+                            writable: !1
+                        }),
+                        e
+                    }()
+                      , s = /^\s*$/;
+                    function c(e) {
+                        throw new Error(e)
+                    }
+                    t.a = new o
+                },
+                39: function(e, t, n) {
+                    "use strict";
+                    function r(e, t) {
+                        for (var n = 0; n < t.length; n++) {
+                            var r = t[n];
+                            r.enumerable = r.enumerable || !1,
+                            r.configurable = !0,
+                            "value"in r && (r.writable = !0),
+                            Object.defineProperty(e, r.key, r)
+                        }
+                    }
+                    var a = function() {
+                        function e() {
+                            !function(e, t) {
+                                if (!(e instanceof t))
+                                    throw new TypeError("Cannot call a class as a function")
+                            }(this, e)
+                        }
+                        var t, n, a;
+                        return t = e,
+                        (n = [{
+                            key: "encode",
+                            value: function(e) {
+                                try {
+                                    return window.btoa(unescape(encodeURIComponent(e)))
+                                } catch (e) {}
+                            }
+                        }, {
+                            key: "decode",
+                            value: function(e) {
+                                try {
+                                    return decodeURIComponent(escape(window.atob(e)))
+                                } catch (e) {}
+                            }
+                        }, {
+                            key: "encodeUrlSafe",
+                            value: function(e) {
+                                try {
+                                    return this.encode(e).replace(/\+/g, ".").replace(/\//g, "_").replace(/=/g, "-")
+                                } catch (e) {}
+                            }
+                        }, {
+                            key: "parse",
+                            value: function(e, t) {
+                                var n = /^data:([a-z]+\/[a-z0-9-+.]+(;[a-z0-9-.!#$%*+.{}|~`]+=[a-z0-9-.!#$%*+.{}|~`]+)*)?(;base64)?,([a-z0-9!$&',()*+;=\-._~:@\/?%\s]*?)$/i.exec(e);
+                                if (null !== n) {
+                                    var r = n[1]
+                                      , a = ";base64" === n[3] ? this.decode(n[4]) : void 0;
+                                    return t === r ? a : void 0
+                                }
+                            }
+                        }]) && r(t.prototype, n),
+                        a && r(t, a),
+                        Object.defineProperty(t, "prototype", {
+                            writable: !1
+                        }),
+                        e
+                    }();
+                    t.a = new a
+                },
+                4: function(e, t, n) {
+                    "use strict";
+                    function r(e, t) {
+                        for (var n = 0; n < t.length; n++) {
+                            var r = t[n];
+                            r.enumerable = r.enumerable || !1,
+                            r.configurable = !0,
+                            "value"in r && (r.writable = !0),
+                            Object.defineProperty(e, r.key, r)
+                        }
+                    }
+                    var a = function() {
+                        function e() {
+                            !function(e, t) {
+                                if (!(e instanceof t))
+                                    throw new TypeError("Cannot call a class as a function")
+                            }(this, e)
+                        }
+                        var t, n, a;
+                        return t = e,
+                        (n = [{
+                            key: "get",
+                            value: function(e, t) {
+                                var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : void 0;
+                                return this.isUndefinedOrNull(t) || this.isUndefinedOrNull(t[e[0]]) ? n : 1 === e.length ? t[e[0]] : this.get(e.slice(1), t[e[0]], n)
+                            }
+                        }, {
+                            key: "isUndefinedOrNull",
+                            value: function(e) {
+                                return null == e
+                            }
+                        }, {
+                            key: "isEmptyOrNull",
+                            value: function(e) {
+                                return this.isUndefinedOrNull(e) || "" === e
+                            }
+                        }, {
+                            key: "createNestedObject",
+                            value: function(e, t, n) {
+                                var r = e
+                                  , a = t.pop();
+                                return t.map((function(e) {
+                                    return r[e] = r[e] || {},
+                                    r = r[e],
+                                    0
+                                }
+                                )),
+                                r[a] = n,
+                                r = r[a]
+                            }
+                        }, {
+                            key: "extractRequiredAttributes",
+                            value: function(e, t) {
+                                for (var n = {}, r = 0; r < t.length; r += 1) {
+                                    var a = t[r];
+                                    if (a.indexOf(".") > 0) {
+                                        var i = a.split(".")
+                                          , o = this.get(i, e, void 0);
+                                        this.createNestedObject(n, i, o)
+                                    } else
+                                        this.isUndefinedOrNull(e[a]) || (n[a] = e[a])
+                                }
+                                return n
+                            }
+                        }, {
+                            key: "removeEmpty",
+                            value: function(e) {
+                                var t = this
+                                  , n = e;
+                                return Object.keys(n).forEach((function(e) {
+                                    t.isEmptyOrNull(n[e]) && delete n[e]
+                                }
+                                )),
+                                n
+                            }
+                        }, {
+                            key: "removeSpecificKeys",
+                            value: function(e, t) {
+                                var n = e;
+                                return t.map((function(e) {
+                                    return delete n[e]
+                                }
+                                )),
+                                n
+                            }
+                        }]) && r(t.prototype, n),
+                        a && r(t, a),
+                        Object.defineProperty(t, "prototype", {
+                            writable: !1
+                        }),
+                        e
+                    }();
+                    t.a = new a
+                },
+                5: function(e, t, n) {
+                    "use strict";
+                    var r = {
+                        TFS_HIDE_COBROWSE_ID: "tfs_hide_cobrowse",
+                        TFS_CONTAINER_ID: "tfs_container",
+                        TFS_CONTAINER_ROOT_ID: "tfs_container_root",
+                        TFS_CONTAINER_ROOT_PRE_ID: "tfs_container_root_pre",
+                        TFS_DRAG_ID: "tfs_drag",
+                        TFS_OVERLAY_ID: "tfs_overlay",
+                        TFS_IFRAME_ID: "tfs_interaction_iframe",
+                        TFS_SCRIPT_ID: "tfs-js-iframe-async",
+                        APPLE_SCRIPT_ID: "tfs-js-abc",
+                        TFS_RENDERER_SCRIPT_ID: "tfs-js-renderer",
+                        VISITOR_SESSION_ID: "visitorSessionId",
+                        INTERACTION_ID: "interactionId",
+                        CHAT: "chat",
+                        QUEUE: "queue",
+                        CHAT_STATUS: "chatStatus",
+                        TAB_SESSION_KEY: "tab-session-key",
+                        BROWSER_SESSION_KEY: "browser-session-key",
+                        PREVIOUS_WINDOW_NAME: "previous-window-name",
+                        LAST_UPDATED_TIME: "ts",
+                        SOURCE: "source",
+                        CARDS_RESOURCE_NAME: "cards.js",
+                        CARDS_MIN_RESOURCE_NAME: "cards.min.js",
+                        WIDGET_LOADER_ID: "widget-loader",
+                        XD_SCRIPT_RESOURCE_NAME: "xd.js",
+                        XD_SCRIPT_MIN_RESOURCE_NAME: "xd.min.js",
+                        REQUIRED_KEYS: ["app.context.queue", "app.context.accountId", "chat.visitorSessionId", "chat.domainAliases", "chat.startTime", "va.turnsId", "va.noInput", "va.poller", "va.vaSurveyCompleted", "messaging.userTokenId", "messaging.brandUserId", "messaging.interactionStatus", "widgetLoaded", "initialWorkflow", "reload", "displayMode", "asid", "appId"],
+                        WORKFLOW: "workflow",
+                        PRECHAT_DATA_KEYS: {
+                            ACTIVE_SESSION: "asid",
+                            RULE_ID: "sc",
+                            APP_INTERACTION_ID: "appInteractionId",
+                            RULE_CATEGORY: "rc",
+                            VISITOR_ID: "vi"
+                        },
+                        STORE_UPDATE: "STORE_UPDATE",
+                        STORE_DELETE: "STORE_DELETE",
+                        DISPLAY_MODE: {
+                            FULLSCREEN: "fullscreen",
+                            FLOATING: "floating",
+                            NONE: "none"
+                        },
+                        FRAME_VIEW: {
+                            INPAGE: "inpage",
+                            POPUP: "popup"
+                        },
+                        WIDGET_STATE: {
+                            PAGE_INIT: "pageInit",
+                            WIDGET_LOADING: "widgetLoading",
+                            WIDGET_LOADED: "widgetLoaded",
+                            CARD_OPEN: "cardOpened",
+                            CARD_SUBMIT: "cardSubmitted",
+                            CARD_CANCEL: "cardCanceled",
+                            CARD_CLOSE: "cardClosed",
+                            CHAT_REQUESTED: "chatRequested",
+                            CHAT_CONNECTING: "chatConnecting",
+                            CHAT_RECONCILING: "chatReconciling",
+                            CHAT_STARTED: "chatStarted",
+                            CHAT_INTERACTIVE: "chatInteractive",
+                            CHAT_ENDED: "chatEnded",
+                            CHAT_TRANSFERRED: "chatTransferred",
+                            VA_STARTED: "vaStarted",
+                            VA_ESCALATE: "vaEscalatedToChat",
+                            VA_SURVEY_COMPLETED: "vaSurveyCompleted",
+                            VA_FINALIZE: "vaFinalized",
+                            VA_TERMINATE: "vaTerminated",
+                            VA_RECONCILED: "vaReconciled",
+                            MINIMIZED: "minimized",
+                            MAXIMIZED: "maximized",
+                            WIDGET_CLOSED: "widgetClosed",
+                            USER_ACTIVE: "userActive",
+                            USER_INACTIVE: "userInactive"
+                        },
+                        ORIENTATIONS: {
+                            LANDSCAPE: "landscape",
+                            PORTRAIT: "portrait"
+                        },
+                        JOURNEY: "urls",
+                        WIDGET_LOADED: "widgetLoaded",
+                        INITIAL_WORKFLOW: "initialWorkflow",
+                        INITIATOR: "initiator",
+                        SHOW_ON_RELOAD: "reload",
+                        DISPLAY_MODE_KEY: "displayMode",
+                        CONTENT_PATH: "content",
+                        UDE_CONFIG_JSON: "config.json",
+                        CONFIG_APP_ID: "appId",
+                        TAB_STORAGE_KEY: "tfs-tab",
+                        APP_SESSION_KEY: "app",
+                        CHAT_SESSION_KEY: "chat",
+                        VA_SESSION_KEY: "va",
+                        CARDS_SESSION_KEY: "cards",
+                        MESSAGING_SESSION_KEY: "messaging",
+                        XD_COMMANDS: {
+                            INITIALIZE: "init",
+                            INITIALIZE_ERROR: "init-error",
+                            SET: "set",
+                            GET: "get",
+                            REMOVE: "remove",
+                            UPDATE: "update"
+                        },
+                        ERROR_CODES: {
+                            LOCALSTORAGE_UNAVAILABLE: "LOCALSTORAGE_UNAVAILABLE"
+                        },
+                        TRACK_PLATFORMS: {
+                            chat: "CHAT",
+                            va: "VIRTUAL_AGENT"
+                        },
+                        STATE_CHANGE_EVENT: "stateChange",
+                        POSITION: {
+                            TOP_LEFT: "topleft",
+                            TOP_RIGHT: "topright",
+                            BOTTOM_LEFT: "bottomleft",
+                            BOTTOM_RIGHT: "bottomright"
+                        },
+                        INITIAL_STATE: "initialState",
+                        IS_RECONCILED: "isReconciled",
+                        IFRAME_READY: "iframeReady",
+                        VA_TURNS_ID_KEY: "va.turnsId",
+                        VISITOR_SESSION_ID_KEY: "chat.visitorSessionId",
+                        DOMAIN_ALIASES_KEY: "chat.domainAliases",
+                        DEFAULT_CONFIG: "default",
+                        USER_LOGIN: "login",
+                        USER_PROFILE: "userProfile",
+                        MAX_KEYBOARD_HEIGHT: {
+                            LANDSCAPE: [{
+                                MIN_SCREEN_HEIGHT: 600,
+                                MAX_SCREEN_HEIGHT: 850,
+                                KEYBOARD_HEIGHT: 400
+                            }, {
+                                MIN_SCREEN_HEIGHT: 851,
+                                MAX_SCREEN_HEIGHT: 1100,
+                                KEYBOARD_HEIGHT: 475
+                            }],
+                            PORTRAIT: [{
+                                MIN_SCREEN_HEIGHT: 800,
+                                MAX_SCREEN_HEIGHT: 1150,
+                                KEYBOARD_HEIGHT: 315
+                            }, {
+                                MIN_SCREEN_HEIGHT: 1151,
+                                MAX_SCREEN_HEIGHT: 1500,
+                                KEYBOARD_HEIGHT: 380
+                            }]
+                        },
+                        STYLE_STATE: {
+                            MAXIMIZED: "maximized",
+                            MINIMIZED: "minimized",
+                            CARD: "card",
+                            PLUSCARD: "pluscard",
+                            HIDDEN: "hidden"
+                        },
+                        STYLE_TRANSITION: {
+                            IMMEDIATE: "immediate",
+                            SCROLL: "scroll",
+                            RESIZE: "resize"
+                        },
+                        STORAGE_TYPES: {
+                            LOCALSTORAGE: "localstorage",
+                            CUSTOM: "custom",
+                            XD: "xd"
+                        },
+                        STORAGE_KEY_NAMES: {
+                            USER_SESSION: "tfs-user-session",
+                            TAB_SESSION: "tfs-session",
+                            TAB_PREFIX: "tfs-tab-"
+                        }
+                    }
+                      , a = {
+                        tag: "html",
+                        attr: {},
+                        children: [{
+                            tag: "head",
+                            children: [{
+                                tag: "meta",
+                                attr: {
+                                    charset: "utf-8"
+                                }
+                            }, {
+                                tag: "meta",
+                                attr: {
+                                    "http-equiv": "Content-Type",
+                                    content: "text/html; charset=UTF-8"
+                                }
+                            }]
+                        }, {
+                            tag: "body",
+                            attr: {
+                                style: "position:relative;height:100%;height:100vh;margin:0 auto;overflow:hidden;"
+                            },
+                            children: [{
+                                tag: "div",
+                                attr: {
+                                    id: r.TFS_CONTAINER_ROOT_ID
+                                }
+                            }, {
+                                tag: "div",
+                                attr: {
+                                    id: r.TFS_CONTAINER_ROOT_PRE_ID
+                                }
+                            }]
+                        }]
+                    };
+                    r.DEFAULT_IFRAME_DOCUMENT = a,
+                    t.a = r
+                },
+                623: function(e, t) {
+                    var n = 1e3
+                      , r = 6e4
+                      , a = 60 * r
+                      , i = 24 * a;
+                    function o(e, t, n, r) {
+                        var a = t >= 1.5 * n;
+                        return Math.round(e / n) + " " + r + (a ? "s" : "")
+                    }
+                    e.exports = function(e, t) {
+                        t = t || {};
+                        var s = typeof e;
+                        if ("string" === s && e.length > 0)
+                            return function(e) {
+                                if ((e = String(e)).length > 100)
+                                    return;
+                                var t = /^(-?(?:\d+)?\.?\d+) *(milliseconds?|msecs?|ms|seconds?|secs?|s|minutes?|mins?|m|hours?|hrs?|h|days?|d|weeks?|w|years?|yrs?|y)?$/i.exec(e);
+                                if (!t)
+                                    return;
+                                var o = parseFloat(t[1]);
+                                switch ((t[2] || "ms").toLowerCase()) {
+                                case "years":
+                                case "year":
+                                case "yrs":
+                                case "yr":
+                                case "y":
+                                    return 315576e5 * o;
+                                case "weeks":
+                                case "week":
+                                case "w":
+                                    return 6048e5 * o;
+                                case "days":
+                                case "day":
+                                case "d":
+                                    return o * i;
+                                case "hours":
+                                case "hour":
+                                case "hrs":
+                                case "hr":
+                                case "h":
+                                    return o * a;
+                                case "minutes":
+                                case "minute":
+                                case "mins":
+                                case "min":
+                                case "m":
+                                    return o * r;
+                                case "seconds":
+                                case "second":
+                                case "secs":
+                                case "sec":
+                                case "s":
+                                    return o * n;
+                                case "milliseconds":
+                                case "millisecond":
+                                case "msecs":
+                                case "msec":
+                                case "ms":
+                                    return o;
+                                default:
+                                    return
+                                }
+                            }(e);
+                        if ("number" === s && isFinite(e))
+                            return t.long ? function(e) {
+                                var t = Math.abs(e);
+                                if (t >= i)
+                                    return o(e, t, i, "day");
+                                if (t >= a)
+                                    return o(e, t, a, "hour");
+                                if (t >= r)
+                                    return o(e, t, r, "minute");
+                                if (t >= n)
+                                    return o(e, t, n, "second");
+                                return e + " ms"
+                            }(e) : function(e) {
+                                var t = Math.abs(e);
+                                if (t >= i)
+                                    return Math.round(e / i) + "d";
+                                if (t >= a)
+                                    return Math.round(e / a) + "h";
+                                if (t >= r)
+                                    return Math.round(e / r) + "m";
+                                if (t >= n)
+                                    return Math.round(e / n) + "s";
+                                return e + "ms"
+                            }(e);
+                        throw new Error("val is not a non-empty string or a valid number. val=" + JSON.stringify(e))
+                    }
+                },
+                631: function(e, t, n) {
+                    "use strict";
+                    n.r(t);
+                    var r = n(623)
+                      , a = n.n(r);
+                    function i(e) {
+                        this.message = e
+                    }
+                    i.prototype = new Error,
+                    i.prototype.name = "InvalidCharacterError";
+                    var o = "undefined" != typeof window && window.atob && window.atob.bind(window) || function(e) {
+                        var t = String(e).replace(/=+$/, "");
+                        if (t.length % 4 == 1)
+                            throw new i("'atob' failed: The string to be decoded is not correctly encoded.");
+                        for (var n, r, a = 0, o = 0, s = ""; r = t.charAt(o++); ~r && (n = a % 4 ? 64 * n + r : r,
+                        a++ % 4) ? s += String.fromCharCode(255 & n >> (-2 * a & 6)) : 0)
+                            r = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".indexOf(r);
+                        return s
+                    }
+                    ;
+                    function s(e) {
+                        var t = e.replace(/-/g, "+").replace(/_/g, "/");
+                        switch (t.length % 4) {
+                        case 0:
+                            break;
+                        case 2:
+                            t += "==";
+                            break;
+                        case 3:
+                            t += "=";
+                            break;
+                        default:
+                            throw "Illegal base64url string!"
+                        }
+                        try {
+                            return function(e) {
+                                return decodeURIComponent(o(e).replace(/(.)/g, (function(e, t) {
+                                    var n = t.charCodeAt(0).toString(16).toUpperCase();
+                                    return n.length < 2 && (n = "0" + n),
+                                    "%" + n
+                                }
+                                )))
+                            }(t)
+                        } catch (e) {
+                            return o(t)
+                        }
+                    }
+                    function c(e) {
+                        this.message = e
+                    }
+                    c.prototype = new Error,
+                    c.prototype.name = "InvalidTokenError";
+                    var u = function(e, t) {
+                        if ("string" != typeof e)
+                            throw new c("Invalid token specified");
+                        var n = !0 === (t = t || {}).header ? 0 : 1;
+                        try {
+                            return JSON.parse(s(e.split(".")[n]))
+                        } catch (e) {
+                            throw new c("Invalid token specified: " + e.message)
+                        }
+                    }
+                      , l = n(28)
+                      , f = n(26)
+                      , d = n(9)
+                      , E = n(18)
+                      , p = n(161)
+                      , m = (n(13),
+                    n(4))
+                      , T = n(143)
+                      , h = n(11);
+                    function y(e, t) {
+                        for (var n = 0; n < t.length; n++) {
+                            var r = t[n];
+                            r.enumerable = r.enumerable || !1,
+                            r.configurable = !0,
+                            "value"in r && (r.writable = !0),
+                            Object.defineProperty(e, r.key, r)
+                        }
+                    }
+                    var v, I, _, A = "//".concat(l.a.EXTENSIBLE.DOMAIN_PROD).concat(l.a.EXTENSIBLE.PATH).concat(l.a.EXTENSIBLE.SCRIPT), S = {}, g = {}, O = !1, R = document, N = window;
+                    function w(e) {
+                        var t = l.a.I18N.EN["ERR_".concat(e, "_TITLE")]
+                          , n = l.a.I18N.EN["ERR_".concat(e, "_DESC")]
+                          , r = R.getElementById(l.a.PRERENDER_ELEMENTS.TEXT)
+                          , a = R.getElementById(l.a.PRERENDER_ELEMENTS.SPINNER);
+                        E.a.hide(a),
+                        m.a.isUndefinedOrNull(r) || (r.innerHTML = "<section><h3>".concat(t, "</h3><span>").concat(n, "</span></section>"))
+                    }
+                    function b() {
+                        O ? N._tfs.isInteractionActive() || (g[l.a.URL_PARAMS.FIRE_TARGET_DETERMINATION] ? N.SN.trackEvent(l.a.EVENTS.TARGET_DETERMINATION, (function() {
+                            C()
+                        }
+                        ), {
+                            overallCG: !1,
+                            scenario: g[l.a.URL_PARAMS.RULE_ID] || "directchat",
+                            scenarioCG: !1,
+                            experience: g[l.a.URL_PARAMS.INVITE_ID] || "directchat",
+                            applicationCG: !1,
+                            inviteType: l.a.TYPE_BUTTON
+                        }) : C()) : d.a.requestTimeout(b, 20)
+                    }
+                    function C() {
+                        if (!m.a.isEmptyOrNull(v))
+                            N._tfs.login(v);
+                        var e, t = g[l.a.URL_PARAMS.APP_ID] || "default", n = g[l.a.URL_PARAMS.INVITE_ID] || "directchat", r = g[l.a.URL_PARAMS.RULE_ID] || "directchat";
+                        n && (e = {
+                            appId: t,
+                            inviteId: n,
+                            ruleId: r,
+                            state: "minimized"
+                        });
+                        N._tfs.startInteraction({
+                            prechatData: S
+                        }, e)
+                    }
+                    function D(e) {
+                        var t = function(e) {
+                            try {
+                                return u(e)
+                            } catch (e) {
+                                return null
+                            }
+                        }(e)
+                          , n = l.a.JWT_TOKEN.EXPIRES;
+                        if (!m.a.isUndefinedOrNull(t)) {
+                            if (m.a.isUndefinedOrNull(t[l.a.JWT_TOKEN.EXP]) || (n = l.a.JWT_TOKEN.EXP),
+                            m.a.isEmptyOrNull(t[n]))
+                                throw new Error(l.a.ERRORS.INVALID_SESSION);
+                            if (function(e, t) {
+                                var n = new Date(0)
+                                  , r = e[t];
+                                if (h.a.isNumber(r) && t === l.a.JWT_TOKEN.EXP && (n = new Date(1e3 * r)),
+                                h.a.isString(r) && t === l.a.JWT_TOKEN.EXPIRES && !m.a.isUndefinedOrNull(e[l.a.JWT_TOKEN.ISSUED_AT])) {
+                                    var i = a()(r);
+                                    m.a.isUndefinedOrNull(i) ? /\d{4}(.\d{2}){2}(\s|T)(\d{2}.){2}\d{2}/.test(r) && (n = new Date(r)) : n = new Date(1e3 * e[l.a.JWT_TOKEN.ISSUED_AT] + i)
+                                }
+                                return Date.now() - n.getTime() > 0
+                            }(t, n))
+                                throw new Error(l.a.ERRORS.SESSION_EXPIRED);
+                            var r = t[l.a.JWT_TOKEN.ACCOUNT_ID];
+                            m.a.isEmptyOrNull(r) || (I = "".concat(r, "-v1-001"));
+                            var i = t[l.a.JWT_TOKEN.BRAND_USER_ID];
+                            m.a.isEmptyOrNull(i) || (v = i);
+                            var o = t[l.a.JWT_TOKEN.CONTEXT];
+                            m.a.isEmptyOrNull(o) || (S = o)
+                        }
+                    }
+                    function L() {
+                        var e = _.get(l.a.DEBUG_KEY) || !1;
+                        A = e ? "//".concat(window.location.host).concat(l.a.EXTENSIBLE.PATH).concat(l.a.EXTENSIBLE.SCRIPT_DEBUG) : "".concat(l.a.EXTENSIBLE.PATH).concat(l.a.EXTENSIBLE.SCRIPT),
+                        "true" === g[l.a.URL_PARAMS.IS_POPUP] && (N._tfs = N._tfs || {},
+                        N._tfs.isPopup = !0),
+                        E.a.injectScript(A, (function(e) {
+                            var t = R.getElementById(l.a.PRERENDER_ELEMENTS.TEXT);
+                            switch (e) {
+                            case "error":
+                                w(l.a.ERRORS.LOADING_FAILED);
+                                break;
+                            case "timeout":
+                                t && (t.innerHTML = "Still loading, but taking longer than usual…");
+                                break;
+                            case "success":
+                                N.SN && N.SN.initialize && (N.SN.initialize(I, {
+                                    loadCustomScript: g[l.a.URL_PARAMS.LOAD_CUSTOMSCRIPT] || !1
+                                }),
+                                b())
+                            }
+                        }
+                        ), R, {
+                            id: l.a.EXTENSIBLE.SCRIPT_ID
+                        }, 3e4)
+                    }
+                    R.title = l.a.WINDOW.TITLE,
+                    N.name = N.name || l.a.WINDOW.NAME,
+                    N.addEventListener(l.a.STATE_CHANGE_EVENT, (function(e) {
+                        var t, n = e.detail;
+                        switch (n && n.widgetState ? n.widgetState : void 0) {
+                        case l.a.WIDGET_STATE.PAGE_INIT:
+                            O = !0;
+                            break;
+                        case l.a.WIDGET_STATE.WIDGET_LOADED:
+                            _.set(l.a.LOCAL_STORAGE_KEY, {
+                                loaded: !0
+                            }),
+                            t = R.getElementById(l.a.PRERENDER_ELEMENTS.CONTAINER),
+                            m.a.isUndefinedOrNull(t) || t.parentNode.removeChild(t);
+                            break;
+                        case l.a.WIDGET_STATE.CHAT_STARTED:
+                            g[l.a.URL_PARAMS.FIRE_LINK_PROPERTY] && (N.SN.trackEvent(l.a.EVENTS.LINK_PROPERTY, {
+                                name: S[l.a.IVR.ANI] || void 0,
+                                value: S[l.a.IVR.PHONE_NUMBER] || void 0
+                            }),
+                            N.SN.trackEvent(l.a.EVENTS.CONNECTION_TO_AGENT, {
+                                HasChatConnected: !0
+                            }));
+                            break;
+                        case l.a.WIDGET_STATE.WIDGET_CLOSED:
+                            _.remove(l.a.LOCAL_STORAGE_KEY)
+                        }
+                    }
+                    ));
+                    var P = new (function() {
+                        function e() {
+                            !function(e, t) {
+                                if (!(e instanceof t))
+                                    throw new TypeError("Cannot call a class as a function")
+                            }(this, e)
+                        }
+                        var t, n, r;
+                        return t = e,
+                        (n = [{
+                            key: "init",
+                            value: function() {
+                                p.a.localStorage ? function() {
+                                    var e = window.location.href;
+                                    g = f.a.parseUrlParams(e),
+                                    m.a.isEmptyOrNull(I) && (I = g[l.a.URL_PARAMS.CLIENT_KEY]);
+                                    var t = g[l.a.URL_PARAMS.TOKEN];
+                                    if (!m.a.isEmptyOrNull(t))
+                                        try {
+                                            D(t)
+                                        } catch (e) {
+                                            return w(e.message),
+                                            !1
+                                        }
+                                    if (m.a.isEmptyOrNull(I))
+                                        return w(l.a.ERRORS.INVALID_CLIENT_KEY),
+                                        !1;
+                                    if (g[l.a.URL_PARAMS.CONTEXT_INFO])
+                                        try {
+                                            S = JSON.parse(g[l.a.URL_PARAMS.CONTEXT_INFO])
+                                        } catch (e) {
+                                            return w(l.a.ERRORS.INVALID_CONTEXT),
+                                            !1
+                                        }
+                                    return !0
+                                }() && (_ = new T.a("localStorage","".concat(I, "||").concat(l.a.LOCAL_STORAGE_NAME)),
+                                L()) : w(l.a.ERRORS.PRIVATE_BROWSING)
+                            }
+                        }]) && y(t.prototype, n),
+                        r && y(t, r),
+                        Object.defineProperty(t, "prototype", {
+                            writable: !1
+                        }),
+                        e
+                    }());
+                    t.default = P;
+                    window.addEventListener("load", P.init)
+                },
+                75: function(e, t) {
+                    var n;
+                    n = function() {
+                        return this
+                    }();
+                    try {
+                        n = n || new Function("return this")()
+                    } catch (e) {
+                        "object" == typeof window && (n = window)
+                    }
+                    e.exports = n
+                },
+                8: function(e, t, n) {
+                    "use strict";
+                    function r(e) {
+                        return (r = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
+                            return typeof e
+                        }
+                        : function(e) {
+                            return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
+                        }
+                        )(e)
+                    }
+                    t.a = function e(t) {
+                        var n = arguments;
+                        if (null == t || "object" !== r(t))
+                            return t;
+                        for (var a = t, i = arguments.length <= 1 ? 0 : arguments.length - 1, o = function(t) {
+                            var i = t + 1 < 1 || n.length <= t + 1 ? void 0 : n[t + 1];
+                            null != i && "object" === r(i) && Object.keys(i).map((function(t) {
+                                return Object.prototype.hasOwnProperty.call(i, t) && (void 0 !== i[t] && null !== i[t] && i[t].constructor && i[t].constructor === Object ? (void 0 === a[t] && (a[t] = {}),
+                                "object" !== r(a[t]) ? a[t] = i[t] : e(a[t], i[t])) : i[t] && i[t].constructor === Array ? a[t] = i[t].slice(0) : a[t] = i[t]),
+                                0
+                            }
+                            ))
+                        }, s = 0; s < i; s += 1)
+                            o(s);
+                        return a
+                    }
+                },
+                9: function(e, t, n) {
+                    "use strict";
+                    var r = n(13)
+                      , a = void 0 === arguments ? void 0 : arguments;
+                    function i(e, t) {
+                        if (!(e instanceof t))
+                            throw new TypeError("Cannot call a class as a function")
+                    }
+                    function o(e, t) {
+                        for (var n = 0; n < t.length; n++) {
+                            var r = t[n];
+                            r.enumerable = r.enumerable || !1,
+                            r.configurable = !0,
+                            "value"in r && (r.writable = !0),
+                            Object.defineProperty(e, r.key, r)
+                        }
+                    }
+                    function s(e, t, n) {
+                        return t && o(e.prototype, t),
+                        n && o(e, n),
+                        Object.defineProperty(e, "prototype", {
+                            writable: !1
+                        }),
+                        e
+                    }
+                    var c, u = function(e) {
+                        return window.setTimeout(e, 1e3 / 60)
+                    }, l = 0;
+                    function f(e, t) {
+                        do {
+                            l === e ? l = 0 : l += 1
+                        } while (Object.prototype.hasOwnProperty.call(t, l));
+                        return l
+                    }
+                    var d = function() {
+                        var e;
+                        if (window.Worker && window.Blob && !r.a.ieVersion)
+                            try {
+                                var t = {}
+                                  , n = new Blob(['e={};onmessage=function(a){var t,r=a.data,s=r.name,n=r.fakeId;switch(r.hasOwnProperty("time")&&(t=r.time),s){case"setInterval":e[n]=setInterval(function(){postMessage({fakeId:n})},t);break;case"clearInterval":e.hasOwnProperty(n)&&(clearInterval(e[n]),delete e[n]);break;case"setTimeout":e[n]=setTimeout(function(){postMessage({fakeId:n}),e.hasOwnProperty(n)&&delete e[n]},t);break;case"clearTimeout":e.hasOwnProperty(n)&&(clearTimeout(e[n]),delete e[n])}}'])
+                                  , i = window.URL.createObjectURL(n);
+                                (c = new Worker(i)).onmessage = function(e) {
+                                    var n, r, a, i = e.data.fakeId;
+                                    Object.prototype.hasOwnProperty.call(t, i) && (a = (n = t[i]).callback,
+                                    r = n.parameters,
+                                    Object.prototype.hasOwnProperty.call(n, "isTimeout") && n.isTimeout && delete t[i]),
+                                    "function" == typeof a && a.apply(window, r)
+                                }
+                                ,
+                                c.onerror = function(e) {}
+                                ,
+                                e = {
+                                    setInterval: function(e, n) {
+                                        var r = f(2147483647, t);
+                                        return t[r] = {
+                                            callback: e,
+                                            parameters: Array.prototype.slice.call(a, 2)
+                                        },
+                                        c.postMessage({
+                                            name: "setInterval",
+                                            fakeId: r,
+                                            time: n
+                                        }),
+                                        r
+                                    },
+                                    clearInterval: function(e) {
+                                        Object.prototype.hasOwnProperty.call(t, e) && (delete t[e],
+                                        c.postMessage({
+                                            name: "clearInterval",
+                                            fakeId: e
+                                        }))
+                                    },
+                                    setTimeout: function(e, n) {
+                                        var r = f(2147483647, t);
+                                        return t[r] = {
+                                            callback: e,
+                                            parameters: Array.prototype.slice.call(a, 2),
+                                            isTimeout: !0
+                                        },
+                                        c.postMessage({
+                                            name: "setTimeout",
+                                            fakeId: r,
+                                            time: n
+                                        }),
+                                        r
+                                    },
+                                    clearTimeout: function(e) {
+                                        Object.prototype.hasOwnProperty.call(t, e) && (delete t[e],
+                                        c.postMessage({
+                                            name: "clearTimeout",
+                                            fakeId: e
+                                        }))
+                                    }
+                                }
+                            } catch (e) {}
+                        return e
+                    }
+                      , E = d()
+                      , p = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || u
+                      , m = function() {
+                        function e() {
+                            i(this, e)
+                        }
+                        return s(e, [{
+                            key: "requestInterval",
+                            value: function(e, t) {
+                                if (E)
+                                    return E.setInterval(e, t);
+                                if (!(window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame && window.mozCancelRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame))
+                                    return window.setInterval(e, t);
+                                var n = (new Date).getTime();
+                                return p((function r() {
+                                    (new Date).getTime() - n >= t && (e.call(),
+                                    n = (new Date).getTime()),
+                                    p(r)
+                                }
+                                ))
+                            }
+                        }, {
+                            key: "clearRequestInterval",
+                            value: function(e) {
+                                E ? E.clearInterval(e) : window.cancelAnimationFrame ? window.cancelAnimationFrame(e) : window.webkitCancelAnimationFrame ? window.webkitCancelAnimationFrame(e) : window.webkitCancelRequestAnimationFrame ? window.webkitCancelRequestAnimationFrame(e) : window.mozCancelRequestAnimationFrame ? window.mozCancelRequestAnimationFrame(e) : window.oCancelRequestAnimationFrame ? window.oCancelRequestAnimationFrame(e) : window.msCancelRequestAnimationFrame ? window.msCancelRequestAnimationFrame(e) : window.clearInterval(e)
+                            }
+                        }, {
+                            key: "requestTimeout",
+                            value: function(e) {
+                                var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
+                                if (E)
+                                    return E.setTimeout(e, t);
+                                if (!(window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame && window.mozCancelRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame))
+                                    return window.setTimeout(e, t);
+                                var n = (new Date).getTime()
+                                  , r = function r() {
+                                    (new Date).getTime() - n >= t ? e.call() : p(r)
+                                };
+                                return p(r)
+                            }
+                        }, {
+                            key: "clearRequestTimeout",
+                            value: function(e) {
+                                E ? E.clearTimeout(e) : window.cancelAnimationFrame ? window.cancelAnimationFrame(e) : window.webkitCancelAnimationFrame ? window.webkitCancelAnimationFrame(e) : window.webkitCancelRequestAnimationFrame ? window.webkitCancelRequestAnimationFrame(e) : window.mozCancelRequestAnimationFrame ? window.mozCancelRequestAnimationFrame(e) : window.oCancelRequestAnimationFrame ? window.oCancelRequestAnimationFrame(e) : window.msCancelRequestAnimationFrame ? window.msCancelRequestAnimationFrame(e) : window.clearTimeout(e)
+                            }
+                        }]),
+                        e
+                    }();
+                    t.a = new m
+                }
+            });
+            //# sourceMappingURL=apploader.min.js.map
+        </script>
+    </body>
+</html>
